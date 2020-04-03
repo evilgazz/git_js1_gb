@@ -1,10 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+	<!-- browser-sync start --server --no-notify --files "styles/*.css, js/*.js, *.html" -->
+	
 	<meta charset="UTF-8">
 	<title>GeekBrains JavaScript #1</title>
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	
 </head>
 <body>
 	
+	<main class="main">
+		<section class="main__homework"> 
+
+			<p>Задать температуру в градусах по Цельсию. Вывести в alert соответствующую температуру в градусах по Фаренгейту. Подсказка: расчёт идёт по формуле: Tf = (9 / 5) * Tc + 32, где Tf – температура по Фаренгейту, Tc – температура по Цельсию</p>
+
+			<div class="main__homework__execution">
+				
+				<input id="celsiusInput" type="text" placeholder="введите значение">
+				<button id="buttonPharyngate" >Результат</button>
+
+			</div>
+
+			<div class="main__homework__out"></div>
+
+		</section>
+
+		<section class="main__homework"> Задание #2 
+
+			Объявить две переменные: admin и name. Записать в name строку "Василий"; Скопировать значение из name в admin. Вывести admin (должно вывести «Василий»).
+
+		</section>
+
+		<section class="main__homework">
+
+		 	Чему будет равно JS-выражение 1000 + "108" = <b>"1000108"</b>
+
+		</section>
+	</main>
+
 </body>
+<script src="js/main.js"></script>
 </html>

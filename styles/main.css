@@ -1,1 +1,44 @@
+body {
+  font-family: sans-serif;
+}
 
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.main__homework {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 100px;
+  text-align: justify;
+}
+.main__homework__out {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 30px;
+}
+.main__homework__execution {
+  display: flex;
+  justify-content: center;
+}
+.main__homework__execution input {
+  width: 120px;
+  height: 26px;
+  vertical-align: bottom;
+  padding: 0;
+  margin-right: 10px;
+}
+.main__homework__execution input::placeholder {
+  text-align: center;
+}
+.main__homework__execution button {
+  width: 120px;
+  height: 30px;
+  vertical-align: bottom;
+  padding: 0;
+  border: 0;
+}
