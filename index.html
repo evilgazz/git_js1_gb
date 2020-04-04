@@ -12,34 +12,72 @@
 <body>
 	
 	<main class="main">
-		<section class="main__homework"> 
 
-			<p>Задать температуру в градусах по Цельсию. Вывести в alert соответствующую температуру в градусах по Фаренгейту. Подсказка: расчёт идёт по формуле: Tf = (9 / 5) * Tc + 32, где Tf – температура по Фаренгейту, Tc – температура по Цельсию</p>
+			<div class="main_1">
+				<h1>Урок #1</h1>
 
-			<div class="main__homework__execution">
-				
-				<input id="celsiusInput" type="text" placeholder="введите значение">
-				<button id="buttonPharyngate" >Результат</button>
+				<section class="main__homework"> 
 
+					<p>Задать температуру в градусах по Цельсию. Вывести в alert соответствующую температуру в градусах по Фаренгейту. Подсказка: расчёт идёт по формуле: Tf = (9 / 5) * Tc + 32, где Tf – температура по Фаренгейту, Tc – температура по Цельсию</p>
+
+					<div class="main__homework__execution">
+						
+						<input id="celsiusInput" type="text" placeholder="введите значение">
+						<button id="buttonPharyngate" >Результат</button>
+
+					</div>
+
+					<div class="main__homework__out"></div>
+
+				</section>
+
+				<section class="main__homework"> Задание #2 
+
+					Объявить две переменные: admin и name. Записать в name строку "Василий"; Скопировать значение из name в admin. Вывести admin (должно вывести «Василий»).
+
+				</section>
+
+				<section class="main__homework">
+
+				 	Чему будет равно JS-выражение 1000 + "108" = <b>"1000108"</b>
+
+				</section>
+
+				<h1>Урок #2</h1>
+				<section class="main__homework flex flex--mod">
+
+
+					<div class="info">
+						<div class="info_mod">
+							<p>Дан код: <b>var a = 1, b = 1, c, d</b></p>
+						</div>
+					
+						<button class="alert_button_a" data-button="a">
+							alert(a)
+						</button>
+
+						<button class="alert_button_b" data-button="b">
+							alert(b)
+						</button>
+					</div>
+					
+					<div id="answer" style="align-self: center;"><span></span></div>
+
+					<div class="buttons_block">
+						
+						<button id="b1">c = <span>++a</span></button>
+						<button id="b2">d = <span>b++</span></button>
+						<button id="b3">c = <span>(2+ ++a)</span></button>
+						<button id="b4">d = <span>(2+ b++)</span></button>
+						
+					</div>
+
+					<div id="resetValues">X</div>
+
+				</section>
 			</div>
-
-			<div class="main__homework__out"></div>
-
-		</section>
-
-		<section class="main__homework"> Задание #2 
-
-			Объявить две переменные: admin и name. Записать в name строку "Василий"; Скопировать значение из name в admin. Вывести admin (должно вывести «Василий»).
-
-		</section>
-
-		<section class="main__homework">
-
-		 	Чему будет равно JS-выражение 1000 + "108" = <b>"1000108"</b>
-
-		</section>
 	</main>
-
 </body>
 <script src="js/main.js"></script>
+<!-- <script src="js/lesson_2.js"></script> -->
 </html>

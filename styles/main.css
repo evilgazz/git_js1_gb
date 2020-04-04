@@ -2,6 +2,54 @@ body {
   font-family: sans-serif;
 }
 
+.info_mod {
+  display: flex;
+}
+.info_mod p {
+  padding: 0;
+}
+
+button[disabled] {
+  color: #999C9C;
+  border: 0;
+  padding: 0;
+}
+button[disabled]:hover {
+  background-color: #FFFFBB;
+}
+button[disabled]:active {
+  background-color: #FFD0D0;
+}
+
+.flex {
+  display: flex;
+}
+.flex--mod {
+  justify-content: space-between;
+}
+
+#resetValues {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background: #C8C8C8;
+  border-radius: 50%;
+}
+#resetValues:hover {
+  background: #ACACAC;
+  user-select: none;
+}
+#resetValues:active {
+  background: #444444;
+  color: white;
+}
+
 .main {
   display: flex;
   justify-content: center;
@@ -9,11 +57,36 @@ body {
   flex-direction: column;
   width: 100%;
 }
+.main h1 {
+  padding-left: 10%;
+}
 .main__homework {
+  position: relative;
   margin-left: 10%;
   margin-right: 10%;
   margin-bottom: 100px;
   text-align: justify;
+  border: 2px solid grey;
+  padding: 30px;
+}
+.main__homework .buttons_block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main__homework .buttons_block b {
+  display: flex;
+  margin-right: auto;
+}
+.main__homework .buttons_block button {
+  width: 180px;
+  font-size: 20px;
+  margin-right: 30px;
+  height: 30px;
+  border: 0;
+}
+.main__homework .buttons_block button::first-letter {
+  color: green;
 }
 .main__homework__out {
   display: flex;
