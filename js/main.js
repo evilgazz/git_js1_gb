@@ -137,3 +137,155 @@ resetValues.onclick = () => {
 	//почему после очистки контента пропадает answerInfo()?
 	// --> answer.textContent = " "
 }
+
+
+
+//УРОК 2 // ЗАДАНИЕ 3
+
+
+let display_c = document.querySelector(".calculator__display__input span")
+//let keys = document.querySelectorAll(".calculator__dashboard__button")
+
+
+
+let el = (element) => {
+	if (element.charAt(0) === "#") { 
+		return document.querySelector(element)
+	} else {
+		return document.querySelectorAll(element)
+	}
+}
+
+let
+	viewer = el("#viewer"),
+	equals = el("#equals"),
+	nums = el(".calc__board__btn"),
+	ops = el(".ops"),
+	theNum = "",
+	oldNum = "",
+	resultNum,
+	operator
+
+let setNum = function() {
+	if(resultNum) {
+		theNum = this.getAttribute("data-num")
+		resultNum = ""
+	} else {
+		viewer.innerHTML = theNum
+		theNum += this.getAttribute("data-num")
+
+	}
+
+	viewer.innerHTML = theNum
+}
+
+let moveNum = function() {
+	oldNum = theNum
+	theNum = ""
+	operator = this.getAttribute("data-ops")
+	viewer.innerHTML = operator
+
+	equals.setAttribute("data-result", "")
+}
+
+let displayNum = () => {
+	oldNum = +oldNum
+	theNum = +theNum
+
+	switch (operator) {
+		case "plus":
+			resultNum = oldNum + theNum
+			break		
+
+		case "minus":
+			resultNum = oldNum - theNum
+			break		
+
+		case "times":
+			resultNum = oldNum * theNum
+			break
+
+		case "divided":
+			resultNum = oldNum / theNum
+			break
+
+
+		default:
+			resultNum = theNum
+	}
+
+	viewer.textContent = resultNum
+	equals.setAttribute("data-result", resultNum)
+
+	oldNum = 0
+	theNum = resultNum
+}
+
+
+let clearAll = () => {
+	oldNum = ""
+	theNum = ""
+	viewer.innerHTML = "0"
+	equals.setAttribute("data-result", resultNum)
+}
+
+for(let i = 0, l = nums.length; i < l; i++) {
+	nums[i].onclick = setNum
+}
+
+for(let i = 0, l = ops.length; i < l; i++) {
+	ops[i].onclick = moveNum
+}
+
+equals.onclick = displayNum
+el("#clear").onclick = clearAll
+
+
+
+
+
+
+/*function calculatorButtons(a, b, op)  {
+
+
+	let display_c = document.querySelector(".calculator__display__input span")
+	let keys = document.querySelectorAll(".calculator__dashboard__button")
+
+	for (let key of keys) {
+		key.onclick = function () {
+			display_c.textContent = display_c.textContent + key.dataset.num;
+
+			let operator_1 = +display_c.textContent
+			console.log(operator_1)
+		}
+	}
+
+
+	//let dataNum = document.querySelectorAll(".calculator__dashboard__button")
+
+
+
+	function calculator(operator) {
+
+		switch (operator) {
+			case '+':
+				return a + b
+				break;
+			case '-':
+				return a - b
+				break;
+			case '*':
+				return a * b
+				break;
+			case '/':
+				return a / b
+				break; 
+		}
+	}
+
+}
+
+
+calculatorButtons()
+
+*/
