@@ -1,4 +1,3 @@
-
 //TASK #1
 let max = 999;
 let digit = {
