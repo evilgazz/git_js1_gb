@@ -1,1 +1,170 @@
+body {
+  font-family: sans-serif;
+}
 
+.info_mod {
+  display: flex;
+}
+.info_mod p {
+  padding: 0;
+}
+
+button[disabled] {
+  color: #999C9C;
+  border: 0;
+  padding: 0;
+}
+button[disabled]:hover {
+  background-color: #FFFFBB;
+}
+button[disabled]:active {
+  background-color: #FFD0D0;
+}
+
+.fix-button {
+  width: 100px;
+}
+
+.flex {
+  display: flex;
+}
+.flex--mod {
+  justify-content: space-between;
+}
+
+#resetValues {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background: #C8C8C8;
+  border-radius: 50%;
+}
+#resetValues:hover {
+  background: #ACACAC;
+  user-select: none;
+}
+#resetValues:active {
+  background: #444444;
+  color: white;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.main h1 {
+  padding-left: 10%;
+}
+.main__homework {
+  position: relative;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 100px;
+  text-align: justify;
+  border: 2px solid grey;
+  padding: 30px;
+}
+.main__homework ul ol {
+  padding-bottom: 10px;
+}
+.main__homework .buttons_block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main__homework .buttons_block b {
+  display: flex;
+  margin-right: auto;
+}
+.main__homework .buttons_block button {
+  width: 180px;
+  font-size: 20px;
+  margin-right: 30px;
+  height: 30px;
+  border: 0;
+}
+.main__homework .buttons_block button::first-letter {
+  color: green;
+}
+.main__homework__out {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 30px;
+}
+.main__homework__execution {
+  display: flex;
+  justify-content: center;
+}
+.main__homework__execution input {
+  width: 120px;
+  height: 26px;
+  vertical-align: bottom;
+  padding: 0;
+  margin-right: 10px;
+}
+.main__homework__execution input::placeholder {
+  text-align: center;
+}
+.main__homework__execution button {
+  width: 120px;
+  height: 30px;
+  vertical-align: bottom;
+  padding: 0;
+  border: 0;
+}
+
+.calc__display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 100px;
+  width: 400px;
+  background: grey;
+}
+.calc__display__input {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 40px;
+  width: 96%;
+  height: 90%;
+  background: linear-gradient(to top, #fce25b, #ecc92b);
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.9) inset;
+  padding-right: 6px;
+  overflow: hidden;
+}
+.calc__board {
+  display: grid;
+  margin: 0 auto;
+  justify-content: center;
+  width: 300px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.calc button {
+  font-size: 30px;
+  width: 100px;
+  height: 100px;
+  border: 0px solid grey;
+  outline: none;
+  background: rgba(204, 204, 204, 0.2);
+}
+.calc button:hover {
+  transition: all 0.1s ease-in-out;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3) inset;
+}
+.calc button:active {
+  transition: all 0.1s ease-in-out;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.6) inset;
+  color: white;
+}
